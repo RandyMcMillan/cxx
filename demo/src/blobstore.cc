@@ -25,6 +25,10 @@ class BlobstoreClient::impl {
 BlobstoreClient::BlobstoreClient() : impl(new class BlobstoreClient::impl) {}
 
 // Upload a new blob and return a blobid that serves as a handle to the blob.
+
+//REF: main.rs
+//REF: pub fn next_chunk(buf: &mut MultiBuf) -> &[u8] { ...
+
 uint64_t BlobstoreClient::put(MultiBuf &buf) const {
   std::string contents;
 
@@ -33,6 +37,10 @@ uint64_t BlobstoreClient::put(MultiBuf &buf) const {
   // In reality there might be sophisticated batching of chunks and/or parallel
   // upload implemented by the blobstore's C++ client.
   while (true) {
+
+    //REF: main.rs
+    //REF: pub fn next_chunk(buf: &mut MultiBuf) -> &[u8] { ...
+
     auto chunk = next_chunk(buf);
     if (chunk.size() == 0) {
       break;

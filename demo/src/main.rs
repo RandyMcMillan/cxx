@@ -10,6 +10,7 @@ mod ffi {
     extern "Rust" {
         type MultiBuf;
 
+        //REF: pub fn next_chunk(buf: &mut MultiBuf) -> &[u8] { ...
         fn next_chunk(buf: &mut MultiBuf) -> &[u8];
     }
 

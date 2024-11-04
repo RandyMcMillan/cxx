@@ -41,7 +41,7 @@ trybuild = { version = "1.0.81", features = ["diff"] }
 doc-scrape-examples = false
 
 [workspace]
-members = ["demo", "flags", "gen/build", "gen/cmd", "gen/lib", "macro", "tests/ffi"]
+members = ["gnostr", "demo", "flags", "gen/build", "gen/cmd", "gen/lib", "macro", "tests/ffi"]
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
